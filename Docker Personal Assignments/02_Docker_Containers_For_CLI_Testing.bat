@@ -1,5 +1,5 @@
 ::############################################################
-::#   File Name  : 02_Docker_Containers_For_CLI_Testing.txt  #
+::#   File Name  : 02_Docker_Containers_For_CLI_Testing.bat  #
 ::#                                                          #
 ::#   Created by : Tejas Lakhina                             #
 ::#                                                          #

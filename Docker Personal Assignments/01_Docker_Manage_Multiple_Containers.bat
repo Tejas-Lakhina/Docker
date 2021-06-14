@@ -1,5 +1,5 @@
 ::############################################################
-::#   File Name  : 01_Docker_Manage_Multiple_Containers.txt  #
+::#   File Name  : 01_Docker_Manage_Multiple_Containers.bat  #
 ::#                                                          #
 ::#   Created by : Tejas Lakhina                             #
 ::#                                                          #
