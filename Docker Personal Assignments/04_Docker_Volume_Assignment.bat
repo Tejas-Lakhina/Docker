@@ -1,11 +1,11 @@
 ::########################Docker Volume Assignment###############################
 ::####################Database upgrade with containers###########################
 ::#1. Create a postgres container with named volume psql using version 9.6.1. 	#
-::#2. Use Docker Hub to learn VOLUME path and versions needed to run it. 		#
-::#3. Check Logs, Stop Container												#
-::#4. Create a new postgres container with same named volume using 9.6.2 		#
-::#5. Check logs to validate.													#
-::#6. Inspect container and check logs at every step.							#
+::#2. Use Docker Hub to learn VOLUME path and versions needed to run it. 	#
+::#3. Check Logs, Stop Container						#
+::#4. Create a new postgres container with same named volume using 9.6.2 	#
+::#5. Check logs to validate.							#
+::#6. Inspect container and check logs at every step.				#
 ::###############################################################################
 
 
