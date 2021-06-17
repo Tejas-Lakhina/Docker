@@ -1,5 +1,5 @@
 #############################Docker-Compose Assignment 2#####################################
-#########Docker Compose for Run-Time Image Building and Multi-Container Development##########
+########Docker Compose for Run-Time Image Building and Multi-Container Development###########
 #1. Docker Hub is your friend.                                                              #
 #2. Build a basic docker compose file for a Drupal Content Management System website.       #
 #3. Use the Postgres Image and build Drupal8.8.2 Image at Run Time using Dockerfile.        #
