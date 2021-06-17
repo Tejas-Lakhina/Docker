@@ -1,0 +1,50 @@
+#############################Docker-Compose Assignment 2#####################################
+#########Docker Compose for Run-Time Image Building and Multi-Container Development##########
+#1. Docker Hub is your friend.                                                              #
+#2. Build a basic docker compose file for a Drupal Content Management System website.       #
+#3. Use the Postgres Image and build Drupal8.8.2 Image at Run Time using Dockerfile.        #
+#4. Use ports to expose Drupal on 8080.                                                     #
+#5. Set POSTGRES_PASSWORD.                                                                  #
+#6. Walk through Drupal Setup via Browser.                                                  #
+#7. Use postgres as DB for Drupal.                                                          #
+#8. Define drupal-data volume pointing to postgres volume.                                  #
+#############################################################################################
+
+
+
+
+#This command is required at the top of every docker-compose file the minimum version is 1 but recommended version is version 2 onwards.
+version: '3.1'
+
+#This block named services includes all the information regarding the containers,volumes,ports,network,environment variables etc.
+services:
+    drupal:
+#This command will download "drupal" official image with latest tag(default tag) from hub.docker.com.
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: custom-drupal
+#This command will expose port 80 and publish it to port 8080.
+        ports:
+            - '8080:80'
+#This command creates volumes for the drupal container
+        volumes:
+            - drupal_modules:/var/www/html/modules
+            - drupal_profiles:/var/www/html/profiles
+            - drupal_themes:/var/www/html/themes
+            - drupal_sites:/var/www/html/sites
+        
+    postgres:
+        image: postgres:12.1
+#This will set the password for the postgres database within the image pulled above.       
+        environment:
+            - POSTGRES_PASSWORD=mypassword
+#This will assign the datavolumes for drupal globally  
+        volumes:
+            - drupal-data:/var/lib/postgresql/data
+volumes:
+    drupal_modules:
+    drupal_profiles:
+    drupal_themes:
+    drupal_sites:
+    drupal-data:
